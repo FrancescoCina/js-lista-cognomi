@@ -11,7 +11,6 @@ Consegna:
 
 */
 
-
 /*
 1- costruisco array con i cognomi della consegna;
 2- prompt per il cognome dell'utente;
@@ -21,3 +20,17 @@ Consegna:
 6- Modifica la posizione dei cognomi all'interno dell'array;
 
 */
+
+
+var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
+console.table(listSurname);
+
+var userSurname = prompt("Qual è il tuo cognome?");
+// console.log(userSurname);
+
+listSurname.push(userSurname);
+console.table(listSurname);
+
+listSurname.sort();
+console.log("Cognomi messi in ordine a-z");
+console.table(listSurname);
