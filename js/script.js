@@ -31,8 +31,15 @@ console.table(listSurname);
 
 // RICHIESTA COGNOME UTENTE
 
-var userSurname = prompt("Qual è il tuo cognome?");
+// var userSurname = prompt("Qual è il tuo cognome?");
 // console.log(userSurname);
+
+
+do {
+    var userSurname = prompt("Qual è il tuo cognome?");
+} while (!userSurname || userSurname === " ")
+
+
 
 
 // INSERIMENTO COGNOME UTENTE IN ARRAY CREATO
@@ -86,4 +93,5 @@ console.log("Posizione cognome inserito: ", listSurname.indexOf(userSurname) + 1
 
 
 // TO DO: .TO LOWER CASE PER LE MAIUSCOLE!!!!!
-// TO DO: Pulisci codice!!!
+
+
