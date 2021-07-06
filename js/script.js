@@ -22,6 +22,8 @@ Consegna:
 */
 
 
+var cpuList = document.getElementById("list-cpu-surname");
+
 var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 console.table(listSurname);
 
@@ -34,3 +36,11 @@ console.table(listSurname);
 listSurname.sort();
 console.log("Cognomi messi in ordine a-z");
 console.table(listSurname);
+
+var listItem = "";
+
+for (var i = 0; i < listSurname.length; i++) {
+    listItem += "<li>" + listSurname[i] + "</li>";
+}
+
+cpuList.innerHTML = listItem;
