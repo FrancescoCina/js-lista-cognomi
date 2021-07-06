@@ -26,7 +26,7 @@ var positionSurname = document.getElementById("position-surname");
 
 // ARRAY COGNOMI
 
-var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
+var listSurname = ["bianchi", "neri", "rossi", "verdi", "gialli"];
 console.table(listSurname);
 
 // RICHIESTA COGNOME UTENTE
@@ -36,11 +36,8 @@ console.table(listSurname);
 
 
 do {
-    var userSurname = prompt("Qual è il tuo cognome?");
+    var userSurname = prompt("Qual è il tuo cognome?").trim().toLowerCase();
 } while (!userSurname || userSurname === " ")
-
-
-
 
 // INSERIMENTO COGNOME UTENTE IN ARRAY CREATO
 
@@ -51,13 +48,12 @@ console.table(listSurname);
 
 listSurname.sort();
 // STAMPO IN ORDINE ALFABETICO
+
 // in console
 console.log("Cognomi messi in ordine a-z");
 console.table(listSurname);
 
-
 var listItem = "";
-
 var i = 0;
 while (i < listSurname.length) {
     listItem += "<li>" + listSurname[i] + "</li>";
@@ -67,6 +63,19 @@ while (i < listSurname.length) {
 // in HTML
 
 orderList.innerHTML = listItem;
+
+
+
+// CICLO PER RENDERE TUTTI GLI ELEMENTI DELL'ARRAY MAIUSCOLI
+
+/* for (var i = 0; i < listSurname.length; i++) {
+    listSurname[i] = listSurname[i].toUpperCase();
+}
+console.table(listSurname);
+// -------------------
+
+ */
+
 
 
 // POSIZIONE "UMANA"
@@ -91,7 +100,5 @@ positionSurname.innerHTML = "La posizione del numero inserito è: " + position;
 console.log("Posizione cognome inserito: ", listSurname.indexOf(userSurname) + 1);
 
 
-
-// TO DO: .TO LOWER CASE PER LE MAIUSCOLE!!!!!
 
 
