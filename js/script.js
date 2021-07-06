@@ -39,8 +39,20 @@ console.table(listSurname);
 
 var listItem = "";
 
-for (var i = 0; i < listSurname.length; i++) {
+/* for (var i = 0; i < listSurname.length; i++) {
     listItem += "<li>" + listSurname[i] + "</li>";
+} */
+
+
+// traduzione del for in while
+
+var i = 0;
+while (i < listSurname.length) {
+    listItem += "<li>" + listSurname[i] + "</li>";
+    i++;
 }
 
+
+
 cpuList.innerHTML = listItem;
+
