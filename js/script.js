@@ -23,8 +23,9 @@ Consegna:
 
 
 var cpuList = document.getElementById("list-cpu-surname");
+var humanList = document.getElementById("list-human-surname");
 
-var listSurname = ["Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
+var listSurname = ["", "Bianchi", "Neri", "Rossi", "Verdi", "Gialli"];
 console.table(listSurname);
 
 var userSurname = prompt("Qual è il tuo cognome?");
@@ -39,20 +40,54 @@ console.table(listSurname);
 
 var listItem = "";
 
-/* for (var i = 0; i < listSurname.length; i++) {
+
+
+
+/* 
+for (var i = 0; i < listSurname.length; i++) {
     listItem += "<li>" + listSurname[i] + "</li>";
-} */
+}  */
+
+
+
 
 
 // traduzione del for in while
 
-var i = 0;
+/* var i = 0;
 while (i < listSurname.length) {
     listItem += "<li>" + listSurname[i] + "</li>";
     i++;
 }
 
+cpuList.innerHTML = listItem; 
+
+ */
 
 
-cpuList.innerHTML = listItem;
 
+/* var i = 1;
+while (i < listSurname.length + 1) {
+    listItem += "<li>" + i + " " + listSurname[i] + "</li>";
+    ++i;
+} */
+
+
+
+for (var i = 1; i < listSurname.length; i++) {
+    listItem += "<li>" + i + " " + listSurname.sort()[i] + "</li>";
+}
+
+listItem.slice(1);
+
+console.log("Dopo slice.");
+console.table(listItem);
+humanList.innerHTML = listItem;
+
+
+
+
+
+
+
+// TO DO: .TO LOWER CASE PER LE MAIUSCOLE!!!!!
