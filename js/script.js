@@ -19,7 +19,7 @@ Consegna:
 */
 // PER PRENDERMI L'HTML
 
-var cpuList = document.getElementById("list-cpu-surname");
+var orderList = document.getElementById("list-surname-order");
 var humanList = document.getElementById("list-human-surname");
 var positionSurname = document.getElementById("position-surname");
 
@@ -43,56 +43,41 @@ console.table(listSurname);
 // ORDINO ARRAY
 
 listSurname.sort();
+// STAMPO IN ORDINE ALFABETICO
+// in console
 console.log("Cognomi messi in ordine a-z");
 console.table(listSurname);
 
 
-
-// STAMPO IN ORDINE ALFABETICO
-
 var listItem = "";
-
-// con for
-/* 
-for (var i = 0; i < listSurname.length; i++) {
-    listItem += "<li>" + listSurname[i] + "</li>";
-}  */
-
-
-// con while
 
 var i = 0;
 while (i < listSurname.length) {
     listItem += "<li>" + listSurname[i] + "</li>";
-    i++;
-}
-
-// STAMPA IN CONSOLE
-console.log(listItem);
-
-
-// STAMPA IN HTML
-cpuList.innerHTML = listItem;
-
-
-
-// CON WHILE
-/* var i = 0;
-while (i < listSurname.length + 1) {
-    listItem += "<li>" + i + " " + listSurname[i] + "</li>";
     ++i;
-} */
-
-
-for (var i = 0; i < listSurname.length; i++) {
-    listItem += "<li>" + (i + 1) + " " + listSurname[i] + "</li>";
 }
+
+// in HTML
+
+orderList.innerHTML = listItem;
+
+
+// POSIZIONE "UMANA"
+
+var listItem = "";
+
+var i = 0;
+while (i < listSurname.length) {
+    listItem += "<li>" + (i + 1) + " " + listSurname[i] + "</li>";
+    ++i;
+}
+
 
 // console.table(listItem);
 humanList.innerHTML = listItem;
 
 
-// PER STABILIRE POSIZIONE "UMANA": 
+// PER STAMPARE IN HTML POSIZIONE "UMANA": 
 
 var position = listSurname.indexOf(userSurname) + 1;
 positionSurname.innerHTML = "La posizione del numero inserito è: " + position;
