@@ -36,8 +36,10 @@ console.table(listSurname);
 
 
 do {
-    var userSurname = prompt("Qual è il tuo cognome?").trim().toLowerCase();
-} while (!userSurname || userSurname === " ")
+    var userSurname = prompt("Qual è il tuo cognome?").toLowerCase();
+} while (!userSurname || userSurname.trim() === "");
+
+userSurname = userSurname.trim();
 
 // INSERIMENTO COGNOME UTENTE IN ARRAY CREATO
 
@@ -96,8 +98,8 @@ humanList.innerHTML = listItem;
 // PER STAMPARE IN HTML POSIZIONE "UMANA": 
 
 var position = listSurname.indexOf(userSurname) + 1;
-positionSurname.innerHTML = "La posizione del numero inserito è: " + position;
-console.log("Posizione cognome inserito: ", listSurname.indexOf(userSurname) + 1);
+positionSurname.innerHTML = "La posizione del cognome inserito è: " + position;
+console.log("Posizione cognome inserito: ", position);
 
 
 

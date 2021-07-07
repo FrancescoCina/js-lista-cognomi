@@ -13,3 +13,7 @@
 .container-list ul {
     margin-top: 20px;
 }
+
+.container-list li {
+    text-transform: capitalize;
+}
